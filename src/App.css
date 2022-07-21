@@ -7,6 +7,14 @@
   pointer-events: none;
 }
 
+h1 {
+  font-size: xx-large;
+}
+
+p {
+  font-size: medium;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -22,6 +30,86 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+footer {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: bisque;
+  color: #282c34;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+}
+
+main {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 75%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.data-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-width: 300px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: pink;
+  color: #282c34;
+  margin: 0;
+  padding: 0;
+}
+
+.data-items a {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: bisque;
+  color: #282c34;
+  margin: 0;
+  padding: 5px;
+}
+
+.data-items a:nth-child(1) {
+  background-color: coral;
+}
+
+.data-item-detail {
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #282c34;
+  margin: 0;
+  padding: 5px;
 }
 
 .App-link {

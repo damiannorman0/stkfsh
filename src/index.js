@@ -4,10 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import {Provider} from 'react-redux';
+import configureStore from 'store';
+import {Router, Route} from 'react-router-dom';
+import Detail from "./Detail";
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={configureStore()}>
+      <Router history={history}>
+        <Route exact path="/" component={App}/>
+        <Route path="/detail/:id" component={Detail}/>
+      </Router>
+    </Provider>
   </React.StrictMode>
 );
 
