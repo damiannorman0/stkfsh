@@ -4,37 +4,23 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import {detailAction} from "./actions/detailAction";
 import {useDispatch, useSelector} from "react-redux";
+import {useParams} from "react-router-dom";
 
 function Detail(props) {
-  const {id} = props;
-
-  const {data} = useSelector((state) => {
-    console.log('received', state);
+  const {id} = useParams();
+  const {detail} = useSelector((state) => {
     return state.data;
-  }) || [];
+  }) || {};
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const get = async () => {
-      try {
-        await dispatch(detailAction(id));
-      } catch (err ){
-        console.warn(err);
-      }
-    };
-
-    get();
-
+        dispatch(detailAction(id));
   }, [dispatch, id]);
 
-  const dataDisplay = data.map((data) => {
-    return (
-      <div className="data-item-detail">
-        {data.id}
-      </div>
-    );
-  });
+  const dataDisplay = (<div className="data-item-detail">
+    {detail.url}
+  </div>);
 
   return (
     <div className="App">

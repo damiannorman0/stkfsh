@@ -52,6 +52,11 @@ main {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
 section {
@@ -71,12 +76,15 @@ section {
   justify-content: flex-start;
   align-items: flex-start;
   min-width: 300px;
+  min-height: 300px;
   width: 100%;
   box-sizing: border-box;
   background-color: pink;
   color: #282c34;
   margin: 0;
-  padding: 0;
+  padding: 50px;
+  border: solid;
+  border-radius: 25px;
 }
 
 .data-items a {
@@ -94,8 +102,8 @@ section {
   padding: 5px;
 }
 
-.data-items a:nth-child(1) {
-  background-color: coral;
+.data-items a:nth-child(odd) {
+  background-color: darkgoldenrod;
 }
 
 .data-item-detail {

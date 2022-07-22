@@ -9,32 +9,22 @@ import {NavLink} from "react-router-dom";
 
 function App() {
   const {data} = useSelector((state) => {
-    console.log('received', state);
     return state.data;
   }) || [];
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const get = async () => {
-        try {
-          await dispatch(dataAction());
-        } catch (err ){
-          console.warn(err);
-        }
-    };
-
-    get();
+      dispatch(dataAction());
 
   }, [dispatch]);
 
   const dataDisplay = data.map((item) => {
-    const {id = 'id default', name = 'name default'} = item;
+    const {id, name} = item;
     const url = `/detail/${id}`;
     return (
-      <NavLink to={url}>
-          <div className="data-item" key={`data_${id}}`}>
-            <span><p>{id}</p></span>
+      <NavLink to={url} key={`data_${id}}`}>
+          <div className="data-item" >
             <span><p>{name}</p></span>
           </div>
       </NavLink>

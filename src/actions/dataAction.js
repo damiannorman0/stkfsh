@@ -6,18 +6,20 @@ export const dataAction = () => {
 			type: 'LOADING_ACTION'
 		});
 
-		return new Promise((resolve, reject) => {
-			const get = async () => {
+		const get = async () => {
 				try {
 					const data = await getItems();
-					resolve(data);
+					console.log('data1', data);
+					dispatch({
+						type: 'GET_DATA_ACTION',
+						payload: data
+					});
 
 				} catch (err) {
-					reject(err);
+					console.error(err);
 				}
-			}
+		};
 
-			get();
-		});
+		get();
 	};
 };

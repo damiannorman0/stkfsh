@@ -21,6 +21,7 @@ root.render(
       <Router history={history}>
         <Routes>
           <Route path="/" element={<App/>} />
+          <Route path="/detail/:id" element={<Detail/>}/>
         </Routes>
       </Router>
     </Provider>

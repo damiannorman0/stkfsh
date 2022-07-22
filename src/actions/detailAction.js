@@ -6,18 +6,18 @@ export const detailAction = (id) => {
 			type: 'LOADING_ACTION'
 		});
 
-		return new Promise((resolve, reject) => {
 			const get = async () => {
 				try {
 					const data = await getDetail(id);
-					resolve(data);
-
+					dispatch({
+						type: 'GET_DETAIL_ACTION',
+						payload: data
+					});
 				} catch (err) {
-					reject(err);
+					console.warn(err);
 				}
 			}
 
 			get();
-		});
 	};
 };
