@@ -1,3 +1,7 @@
+# For demo purposes only
+
+## Create-React-App may contain vulnerabilities, as seen by using an npm install followed by npm audit. Use caution and delete after testing.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
