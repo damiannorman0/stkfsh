@@ -3,7 +3,7 @@ const initialState = {
 	data: [],
 };
 
-export default (state = initialState, action = {}) => {
+const dataReducer = (state = initialState, action = {}) => {
 	switch (action.type) {
 		case 'LOADING_ACTION':
 			return {
@@ -22,3 +22,5 @@ export default (state = initialState, action = {}) => {
 			return state
 	}
 }
+
+export default dataReducer;

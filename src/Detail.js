@@ -6,7 +6,7 @@ import {detailAction} from "./actions/detailAction";
 import {useDispatch, useSelector} from "react-redux";
 
 function Detail(props) {
-  const {loading, history, id} = props;
+  const {id} = props;
 
   const {data} = useSelector((state) => {
     console.log('received', state);
@@ -26,7 +26,7 @@ function Detail(props) {
 
     get();
 
-  }, [dispatch]);
+  }, [dispatch, id]);
 
   const dataDisplay = data.map((data) => {
     return (

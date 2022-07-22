@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import './App.css';
 import {useSelector, useDispatch} from 'react-redux';
-import {dataAction} from "actions/dataAction";
+import {dataAction} from "./actions/dataAction";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import {NavLink} from "react-router-dom";
