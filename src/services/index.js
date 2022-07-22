@@ -1,4 +1,4 @@
-const api = 'https://www.coingecko.com/en/api';
+const api = 'https://api.coingecko.com/api/v3/exchanges';
 
 const getItems = () => {
   return new Promise((resolve, reject) => {
@@ -13,7 +13,7 @@ const getItems = () => {
 };
 
 const getDetail = (id) => {
-  const detailURL = `${api}/detail/${id}`;
+  const detailURL = `${api}/${id}`;
   return new Promise((resolve, reject) => {
     fetch(detailURL).then((response) => {
       return (response.json());
