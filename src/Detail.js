@@ -18,9 +18,15 @@ function Detail(props) {
         dispatch(detailAction(id));
   }, [dispatch, id]);
 
-  const dataDisplay = (<div className="data-item-detail">
-    {detail.url}
-  </div>);
+  const dataDisplay = (
+    <div className="data-item-detail">
+      <h1>{detail.name}</h1>
+        <div>Trust Score: {detail.trust_score}</div>
+        <div>Trust Score Rank: {detail.trust_score_rank}</div>
+        <div>Established: {detail.year_established}</div>
+      <div>URL: {detail.url}</div>
+    </div>
+  );
 
   return (
     <div className="App">
