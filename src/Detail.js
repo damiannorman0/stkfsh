@@ -20,7 +20,6 @@ function Detail(props) {
 
   const dataDisplay = (
     <div className="data-item-detail">
-      <h1>{detail.name}</h1>
         <div>Trust Score: {detail.trust_score}</div>
         <div>Trust Score Rank: {detail.trust_score_rank}</div>
         <div>Established: {detail.year_established}</div>
@@ -33,6 +32,7 @@ function Detail(props) {
       <Header />
       <main>
         <section>
+          <h1>{detail.name}</h1>
           {dataDisplay}
         </section>
       </main>
